@@ -15,6 +15,7 @@ class LintCleanerTask extends DefaultTask {
   final String UNUSED_RESOURCES_ID = "UnusedResources"
   final String WRITER_ENCODING = "UTF-8"
   final String ARRAY_XML_TAG = "array"
+  final String PLURALS_XML_TAG = "plurals"
   final String FILE_PATH_XML_TAG = "file"
   final String ID_XML_TAG = "id"
   final String ISSUE_XML_TAG = "issue"
@@ -104,7 +105,7 @@ class LintCleanerTask extends DefaultTask {
 
           String lineNumber = Integer.toString(index)
           if (unusedLines.contains(lineNumber) || removingArray) {
-            if (line.contains(ARRAY_XML_TAG)) {
+            if (line.contains(ARRAY_XML_TAG) || line.contains(PLURALS_XML_TAG)) {
               removingArray = !removingArray
             }
           } else {
