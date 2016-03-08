@@ -1,0 +1,6 @@
+    <item type="id" name="menu_new_files" />
+    <item type="id" name="menu_similar_photo" />
+    <item type="id" name="menu_hide_photo" />
+    <item type="id" name="action_restore" />
+    <item type="id" name="content" />
+    <item type="id" name="action_cluster_album" />
